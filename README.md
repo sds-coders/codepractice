@@ -8,4 +8,4 @@ This repository contains codes written to improve our understanding of various p
 
 ### List of books used by sds-coders
 1. Python
-   -"Learn Python the Hard Way" by Zed A. Shaw
+   - "Learn Python the Hard Way" by Zed A. Shaw
