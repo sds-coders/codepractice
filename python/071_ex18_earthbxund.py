@@ -8,7 +8,7 @@ def print_two(*args):
 # 좋아요. 사실 *args는 필요가 없습니다. 그냥 이렇게 하죠.
 def print_two_again(arg1, arg2):
     print "실행인자1: %r, 실행인자2: %r" % (arg1, arg2)
- 
+
 # 이 함수는 실행인자를 하나만 받습니다.
 def print_one(arg1):
     print "실행인자1: %r" % arg1
