@@ -28,3 +28,10 @@ print formatter3 == formatter + formatter2 + formatter + formatter2
 
 formatter4 = "%s %s %s %s"
 print formatter4 == formatter
+
+formatter2 = "%r %r %r %r" 
+print formatter2 %(
+    "I had the thing.","That you could type up right","But it didn't sing","So I said goodnight."
+)
+
+# Q. 포메터는 배열과 같은 것인가?
