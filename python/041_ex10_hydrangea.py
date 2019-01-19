@@ -31,13 +31,19 @@ fat_cat2 = '''
 print fat_cat2
 
 # 10_3. 3/4
+# 
 a = "ducks"
 b = "언동아"
 c = "언동안"
+d = "金"
 
+print d
+print "%r" % d
 count_animals = "\n%s\n%s\n%s" % (a, b, c)
 print count_animals
 count_animals2 = "\n%r\n%r\n%r" % (a, b, c)
 print count_animals2
-count_animals3 = "%r, %r, %r" % (a, b, c)
-print count_animals3
+print a
+print b
+print c
+print "%s, %r, %s" % (a, b, c)
