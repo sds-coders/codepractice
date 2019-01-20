@@ -61,7 +61,7 @@ This repository contains codes written to improve our understanding of various p
    
    예제번호가 제공되는 경우:
    ```
-   1_1_yjinleegh.py
+   001_1_yjinleegh.py
    151_3_yjinleegh.py
    ```
    
