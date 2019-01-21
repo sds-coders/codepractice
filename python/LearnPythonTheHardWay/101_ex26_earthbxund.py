@@ -87,7 +87,7 @@ print secret_formula_words % secret_formula(start_point)
 # ex26.print_first_word(sorted_words)
 # ex26.print_last_word(sorted_words)
 # sorted_words = ex25.sort_sentence(sentence)
-# ex26.print_sorted_words
+# print sorted_words
 
 # ex26.print_first_and_last(sentence)
 
