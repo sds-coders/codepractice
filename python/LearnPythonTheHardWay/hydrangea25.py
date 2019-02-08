@@ -36,5 +36,3 @@ def print_first_and_last_sorted(sentence):
     print_first_word(words)
     print_last_word(words)
     
-# 이렇게 함수를 지정해두면 내가 만든 '모듈'이 완성됨!
-# 임의의 문장을 가지고 터미널에서 python을 실행해 결과를 관찰해 볼 것.
