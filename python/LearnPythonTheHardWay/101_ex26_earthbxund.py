@@ -36,7 +36,9 @@ def print_first_and_last_sorted(sentence):
 
 
 print "Let's practice everything."
-print 'You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.'
+print1 = 'You\'d need to know \'bout escapes '
+print2 = 'with \\ that do \n newlines and \t tabs.'
+print print1 + print2
 
 poem = """
 \tThe lovely world
@@ -52,7 +54,7 @@ print "--------------"
 print poem
 print "--------------"
 
-five = 10 - 2 + 3 - 5
+five = 10 - 2 + 3 - 6
 print "This should be five: %s" % five
 
 def secret_formula(started):
@@ -71,21 +73,22 @@ print "We'd have %d jeans, %d jars, and %d crates." % (beans, jars, crates)
 start_point = start_point / 10
 
 print "We can also do that this way:"
-print "We'd have %d beans, %d jars, and %d crabapples."% secret_formula(start_point)
+secret_formula_words = "We'd have %d beans, %d jars, and %d crates."
+print secret_formula_words % secret_formula(start_point)
 
 
-sentence = "All good things come to those who weight."
+# sentence = "All good things come to those who wait."
 
-words = break_words(sentence)
-sorted_words = sort_words(words)
+# words = ex26.break_words(sentence)
+# sorted_words = ex26.sort_words(words)
 
-print_first_word(words)
-print_last_word(words)
-print_first_word(sorted_words)
-print_last_word(sorted_words)
-sorted_words = sort_sentence(sentence)
-print sorted_words
+# ex26.print_first_word(words)
+# ex26.print_last_word(words)
+# ex26.print_first_word(sorted_words)
+# ex26.print_last_word(sorted_words)
+# sorted_words = ex25.sort_sentence(sentence)
+# print sorted_words
 
-print_first_and_last(sentence)
-print_first_and_last_sorted(sentence)
-    
+# ex26.print_first_and_last(sentence)
+
+# ex26.print_first_and_last_sorted(senence)
