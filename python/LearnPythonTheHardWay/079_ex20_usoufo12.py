@@ -9,7 +9,8 @@ def print_all(f):
 
 def rewind(f):
     f.seek(0)
-
+# seek(offset) -> Move to new file position.
+#       Note that not all file objects are seekable.
 
 def print_a_line(line_count, f):
     print(line_count, f.readline())
