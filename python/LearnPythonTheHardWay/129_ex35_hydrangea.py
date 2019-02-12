@@ -2,31 +2,35 @@
 
 from sys import exit
 # 황금방.
-def gold_room():
-    print "황금으로 가득 찬 방입니다. 얼마나 가져갈까요?"
+# def gold_room():
+#     print "황금으로 가득 찬 방입니다. 얼마나 가져갈까요?"
     # next에 raw_input받아 넣기.
-    next = raw_input(">")
-    if int(next) < 50:
-        print "좋아, 욕심부리지 않는군요. 당신이 이겼습니다!"
-        exit(0)
-    elif int(next) >= 50:
-        print "욕심쟁이 같으니라고. 당장 꺼져."
-        exit(0)
-    else:
-        print "인간이여, 숫자 쓰는 법부터 배우세요."
-        exit(0)
+#     next = raw_input(">")
+#     if int(next) < 50:
+#         print "좋아, 욕심부리지 않는군요. 당신이 이겼습니다!"
+#         exit(0)
+#     elif int(next) >= 50:
+#         print "욕심쟁이 같으니라고. 당장 꺼져."
+#         exit(0)
+#     else:
+#         print "인간이여, 숫자 쓰는 법부터 배우세요."
+#         exit(0)
     # 여기서 문제점. 내가 한 방식은 숫자를 받으면 확실히 실행이 되지만, 문자열을 받으면 ValueError 오류가 떠버림.
     # 밑의 방식의 문제점. 문자열, 정수 다 받을 수 있는데 뭔가 에러가 뜸. 작동방식을 모르겠음.
-#    if "0" in next or "1" in next:
-#        how_much = int(next)
-#    else:
-#        dead("인간이여, 숫자 쓰는 법부터 배우세요.")
-        
-#    if how_much < 50:
-#        print "좋아, 욕심부리지 않는군요. 당신이 이겼습니다!"
-#        exit(0)
-#    else:
-#        dead("욕심쟁이 얼간이 같으니!")
+def gold_room():
+    print "황금으로 가득 찬 방입니다. 얼마나 가져갈까요?"
+    
+    next = raw_input(">")
+    if "0" in next or "1" in next or "2" in next or "3" in next or "4" in next or "5" in next or "6" in next or "7" in next or "8" in next or "9" in next:
+        how_much = int(next)
+    else:
+        dead("인간이여, 숫자 쓰는 법부터 배우세요.")
+       
+    if how_much < 50:
+        print "좋아, 욕심부리지 않는군요. 당신이 이겼습니다!"
+        exit(0)
+    else:
+        dead("욕심쟁이 얼간이 같으니!")
         
 def bear_room():
     print "여기에는 곰이 한 마리 있습니다."
