@@ -6,17 +6,34 @@ def gold_room():
     """it requires you to input any number containing 0 or 1 and you should enter less than 50 in order to win the game"""
     print("황금으로 가득 찬 방입니다. 얼마나 가져갈까요?")
     
-    next = input(">")
-    if "0" in next or "1" in next:
-        how_much = int(next)
-    else:
+    try:        
+        next = int(input(">"))    
+        if how_much < 50:
+            print("좋아, 욕심부리지 않는군요. 당신이 이겼습니다!")
+            exit(0)
+        else:
+            dead("욕심쟁이 얼간이 같으니!")
+            
+    except ValueError:
         dead("인간이여, 숫자 쓰는 법부터 배우세요.")
-        # It may quit the function with the message?
-    if how_much < 50:
-        print("좋아, 욕심부리지 않는군요. 당신이 이겼습니다!")
-        exit(0)
-    else:
-        dead("욕심쟁이 얼간이 같으니!")
+        # quit the function with the message? yes it does.
+
+#def gold_room():
+#    """it requires you to input any number containing 0 or 1 and you #should enter less than 50 in order to win the game"""
+#    print("황금으로 가득 찬 방입니다. 얼마나 가져갈까요?")
+    
+#    next = input(">")
+#    if "0","2", "3", "4", "5", "6", "7", "8", "9", "1" in next :
+#        how_much = int(next)
+#    else:
+#        dead("인간이여, 숫자 쓰는 법부터 배우세요.")
+#        # quit the function with the message? yes it does.
+        
+#    if how_much < 50:
+#        print("좋아, 욕심부리지 않는군요. 당신이 이겼습니다!")
+#        exit(0)
+#    else:
+#        dead("욕심쟁이 얼간이 같으니!")
         
 def bear_room():
     print("Here is a bear")
@@ -77,7 +94,7 @@ def start():
     else:
         dead("문 주위에서 맴돌기만하다 굶어 죽었습니다.")
         
-start()
+#start()
+gold_room()
 
-
-# 프로그램 강재종료/ 인자에 따라서 오류여부/종류 특정가능
+# exit()프로그램 강재종료/ 인자에 따라서 오류여부/종류 특정가능
