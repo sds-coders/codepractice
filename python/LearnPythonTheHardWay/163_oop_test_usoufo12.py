@@ -96,7 +96,7 @@ try:
 				
 			print(question)
 			
-			input(">"
+			input(">")
 			print("답: %s\n\n" % answer)
 	#PHRASES에서 random한 순서로 key-value쌍을 호출, 내부의 @%*를 urlsite의 random word로 바꾸고 값 저장. Q-value, A-key, 정답출력
 	#snippet의 항목개수만큼 출력
