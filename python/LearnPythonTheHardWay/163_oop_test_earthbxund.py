@@ -6,20 +6,21 @@ import sys
 
 WORD_URL = "http://learncodethehardway.org/words.txt"
 WORDS = []
+number = 1
 
 PHRASES = {
-	"class %%%(%%%):":
-	  "%%% 클래스라는 %%%의 일종을 만든다.", # is-a
-	"class %%%(object):\n\tdef __init__(self, ***)":
-	  "%%% 클래스는 self와 *** 매개변수를 받는 __init__을 가졌다.", # has-a
-	"class %%%(object):\n\tdef ***(self, @@@)":
-	  "%%% 클래스는 self와 @@@ 매개변수를 받는 이름이 ***인 함수를 가졌다.", # has-a
-	"*** = %%%()":
-	  "*** 변수를 %%% 클래스의 인스턴스 하나로 정한다.",
-	"***.***(@@@)":
-	  "*** 변수에서 *** 함수를 받아 self, @@@ 매개변수를 넣어 호출한다.",
-	"***.*** = '***'":
-	  "*** 변수에서 *** 속성을 받아 *** 값으로 정한다."
+		"class %%%(%%%):":
+			"%%% 클래스라는 %%%의 일종을 만든다.", # is-a
+		"class %%%(object):\n\tdef __init__(self, ***)":
+			"%%% 클래스는 self와 *** 매개변수를 받는 __init__을 가졌다.", # has-a
+		"class %%%(object):\n\tdef ***(self, @@@)":
+			"%%% 클래스는 self와 @@@ 매개변수를 받는 이름이 ***인 함수를 가졌다.", # has-a
+		"*** = %%%()":
+			"*** 변수를 %%% 클래스의 인스턴스 하나로 정한다.",
+		"***.***(@@@)":
+			"*** 변수에서 *** 함수를 받아 self, @@@ 매개변수를 넣어 호출한다.",
+		"***.*** = '***'":
+			"*** 변수에서 *** 속성을 받아 *** 값으로 정한다."
 }
 
 # 문장을 먼저 연습하고 싶은가
@@ -55,7 +56,7 @@ def convert(snippet, phrase):
 			result = result.replace("***", word, 1)
 
 		# 가짜 매개변수 목록
-		for word in  param_names:
+		for word in param_names:
 			result = result.replace("@@@", word, 1)
 
 		results.append(result)
@@ -75,9 +76,12 @@ try:
 			if PHRASE_FIRST:
 				question, answer = answer, question
 
-				print question
-				
-				raw_input(">")
-				print "답: %s\n\n" % answer
+			print "%d번째 연습" % number
+			print question
+
+			raw_input(">")
+			print "답: %s\n\n" % answer
+			
+			number += 1
 except EOFError:
 	print "\nBye"
