@@ -34,16 +34,16 @@ for word in urlopen(WORD_URL).readlines():
 
 def convert(snippet, phrase):
 	class_names = [w.capitalize() for w in
-				   random.sample(WORDS, snippet.count("***"))]
+				    random.sample(WORDS, snippet.count("%%%"))]
 	other_names = random.sample(WORDS, snippet.count("***"))
 	results = []
 	param_names = []
 	
-	for i in range(0, snippet.count("%%%")):
+	for i in range(0, snippet.count("@@@")):
 		param_count = random.randint(1,3)
 		param_names.append(', '.join(random.sample(WORDS, param_count)))
 	
-	for sentense in snippet, parase:
+	for sentence in snippet, phrase:
 		result = sentence[:]
 		
 		# 가짜 클래스 이름
@@ -58,7 +58,7 @@ def convert(snippet, phrase):
 		for word in  param_names:
 			result = result.replace("@@@", word, 1)
 
-		result.append(result)
+		results.append(result)
 		
 	return results
 
@@ -70,7 +70,7 @@ try:
 		random.shuffle(snippets)
 
 		for snippet in snippets:
-			phrase = PHRASES[shippet]
+			phrase = PHRASES[snippet]
 			question, answer = convert(snippet, phrase)
 			if PHRASE_FIRST:
 				question, answer = answer, question
