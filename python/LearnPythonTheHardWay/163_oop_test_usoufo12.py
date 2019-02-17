@@ -1,11 +1,11 @@
+# -*- coding: utf-8 -*-
+
 # class X(Y) : X is a Y ( X 클래스라는 Y의 일종을 만든다.)
 # class X(object): def__init__(self,J): X 클래스는 self와 J 매개변수를 받는 __init__을 가졌다
 # class X(obejct): def M(self,J): X 클래스는 self와 J 매개변수를 받는 M을 가진다. X has a M
 # foo = x() : foo 변수를 X클래스의 인슷턴스 하나로 정한다
 # foo.M(J) : foo 변수에서 M함수를 받아 self, J매개변수를 넣어 호출한다
 # foo.K = Q : foo 변수에서 K속성을 받아 Q 값으로 정한다.
-
-# -*- coding: utf-8 -*-
 
 import random
 from urllib.request import urlopen
@@ -36,7 +36,7 @@ else:
 
 
 for word in urlopen(WORD_URL).readlines():		  
-	WORDS.append(word.strip()) 
+	WORDS.append(word.strip().decode("utf-8")) 
 # 사이트의 각 문장들을 항목으로 가지는 리스트의 각 항목들에 대하여 블록코드 실행.
 # 블록코드는 각 문장들을 스페이스 단위로 잘라서 나오는 단어들을 WORDS 리스트에 항목추가.
 # read() returns a string as a whole, while readlines() returns list that has strings corresponding to each line. It's why this code uses readlines() instead of read()
@@ -67,7 +67,7 @@ def convert(snippet, phrase):
 			
 		# 가짜 나머지 이름
 		for word in other_names:
-			result = result.replace("***",word, 1)
+			result = result.replace("***", word, 1)
 		
 		# 가짜 매개변수 목록
 		for word in param_names:
@@ -82,7 +82,8 @@ def convert(snippet, phrase):
 # CTRL-D를 누를 때까지 계속한다
 try:
 	while True:
-		snippets = PHRASES.keys()
+		snippets = list(PHRASES.keys())
+		##Python 3!! dict.keys() method returns 'dict_keys'type result, which is required to trnasformed into list or another datatype according to needs.
 		#Returns keys from PHRASE dict.
 		
 		random.shuffle(snippets)
