@@ -1,9 +1,0 @@
-setup.py
-test_project/Hellow_world.py
-test_project/__init__.py
-test_project/test_project.py
-test_project.egg-info/PKG-INFO
-test_project.egg-info/SOURCES.txt
-test_project.egg-info/dependency_links.txt
-test_project.egg-info/requires.txt
-test_project.egg-info/top_level.txt
